@@ -1,0 +1,17 @@
+/target
+/classes
+/checkouts
+/native
+pom.xml
+pom.xml.asc
+*.jar
+*.iml
+*.log
+*.class
+.lein-*
+.nrepl-*
+.idea
+.git
+.cpcache
+.clj-kondo
+.lsp

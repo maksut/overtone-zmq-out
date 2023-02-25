@@ -1,0 +1,16 @@
+{:paths ["src" "native"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/core.async {:mvn/version "1.6.673"}
+        ;; to use 'cljzmq' with 'jeromq' underneath
+        org.zeromq/jeromq {:mvn/version "0.5.3"}
+        org.zeromq/cljzmq {:mvn/version "0.1.4" :exclusions [org.zeromq/jzmq]}
+        overtone/overtone {:git/url "https://github.com/overtone/overtone.git" :sha "887a44bde87071ede41827950f4d3d4a602a1f9c"}}
+
+ :aliases
+ {;; clj -M:repl/nrepl 
+  :repl/nrepl
+  {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
+                cider/cider-nrepl {:mvn/version "0.28.7"}}
+   :main-opts  ["-m" "nrepl.cmdline"
+                "--middleware" "[cider.nrepl/cider-middleware]"
+                "--interactive"]}}}
